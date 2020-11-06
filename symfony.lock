@@ -1,0 +1,8 @@
+{
+    "moneyphp/money": {
+        "version": "v3.3.1"
+    },
+    "php": {
+        "version": "7.4"
+    }
+}

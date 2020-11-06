@@ -1,0 +1,53 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+
+{#    <script src="{{ encore_entry_link_tags('map') }}" async defer></script>#}
+{#    <script#}
+{#            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8oQbj5lHwuVBGxKz1W-Ad_ve2_UJVN5k&callback=initMap&libraries=&v=weekly"#}
+{#            async defer#}
+{#    ></script>#}
+
+    <section class="py-5 mt-5 fade-in">
+        <div class="container" id="container">
+            <div class="col mb-12 pb-3 text-center">
+                <h1 class="main-text">BENNY'S BARBERING CO.</h1>
+                <p class="heading-text">BARBERING DONE RIGHT.</p>
+            </div>
+            <div class="row">
+                <div class="col mb-12">
+                    <h2 class="pb-3 main-text">CONTACT</h2>
+                    <p class="p-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                </div>
+            </div>
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="md-form mb-2">
+                            <label class="p-text" for="exampleFormControlTextarea1">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="Name" class="form-control form-background">
+                            <small class="form-text text-muted">Your name</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="md-form mb-2">
+                            <label class="p-text" for="exampleFormControlTextarea1">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Email Address"
+                                   class="form-control form-background">
+                            <small class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group pb-2">
+                    <label class="p-text" for="exampleFormControlTextarea1">Enquiry</label>
+                    <textarea class="form-control form-background" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <a class="btn btn-light btn-sm">Submit</a>
+            </form>
+            <h2 class="heading-text text-center pt-2">FIND US</h2>
+            <p class="p-text text-center small">Be sure to book in advance</p>
+            <iframe class="map pt-4 pb-4" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2393.5689246799243!2d-1.251864033942208!3d53.135883448155354!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4879967b2b6c05db%3A0xea51b6f89d5e19ff!2sDalestorth%20Rd%2C%20Sutton-in-Ashfield%20NG17%203AE!5e0!3m2!1sen!2suk!4v1603141190597!5m2!1sen!2suk" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </section>
+{% endblock %}

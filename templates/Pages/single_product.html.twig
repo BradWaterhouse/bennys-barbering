@@ -1,0 +1,64 @@
+{% extends "base.html.twig" %}
+
+{% block content %}
+    <section class="py-5 mt-5">
+        <div class="container" id="container">
+            <div class="col mb-12 pb-4 text-center">
+                <h1 class="main-text">BENNY'S BARBERING CO.</h1>
+                <p class="heading-text">BARBERING DONE RIGHT.</p>
+                <h2 class="main-text pt-3">PRODUCTS</h2>
+            </div>
+
+            {% for message in app.flashes('success') %}
+                <div class="alert alert-success text-center">
+                    {{ message }}
+                </div>
+            {% endfor %}
+
+            <div class="card rounded-corners-bottom rounded-corners-top">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img class="card-img-top rounded-corners-top"
+                             src="https://cdn.shopify.com/s/files/1/0627/8837/products/slick_gorilla_powder-600x600_600x.png?v=1547322421"
+                             alt="Card image cap">
+                        <div class="card-body">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card-body">
+                            <h3 class="product-text mt-1 pb-1 text-center">BENNY'S BARBERING HAIR STYLING POWDER</h3>
+                            <p class="card-text pb-3">Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                                when an unknown printer took a galley of type and scrambled it to make a type specimen
+                                book. It has survived not only five centuries, but also the leap into electronic
+                                typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                                release of Letraset sheets containing Lorem Ipsum passages, and more recently with
+                                desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                            <form action="/add-to-cart" method="post">
+                                <div class="quantity">
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <span class="mb-1 mr-2">
+                                                <h5><b>£10.99</b></h5>
+                                            </span>
+                                        </div>
+                                        <div class="col-md-5">
+                                        <span class="mb-3 mr-2">
+                                            <label for="validationCustom01">Quantity</label>
+                                            <input class="form-control" type="number" value="1" id="quantity" name="quantity"/>
+                                            <input type="hidden" name="token" id="token" value="{{ csrf_token('add-form') }}"/>
+                                        </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-light btn-sm" style="width: 100%;">ADD TO CART</button>
+                                <small>All orders will be dispatched within 2/3 working days via Royal Mail</small>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}
